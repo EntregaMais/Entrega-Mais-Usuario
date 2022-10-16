@@ -3,10 +3,12 @@ package br.com.entrega_mais.controller;
 import br.com.entrega_mais.model.UsuarioModel;
 import br.com.entrega_mais.repository.UsuarioRepository;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,6 +29,7 @@ public class UsuarioController {
         return ResponseEntity.ok(repository.findAll());
     }
 
+    @Transactional
     @PostMapping("/salvar")
     public ResponseEntity<UsuarioModel> salvar(@RequestBody UsuarioModel usuario) {
         //Testar no pg admin insrçõe com select no usuario

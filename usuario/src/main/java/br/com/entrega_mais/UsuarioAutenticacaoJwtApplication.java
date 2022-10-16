@@ -7,9 +7,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-//                     {SecurityAutoConfiguration.class} //p n mais validar usuario e senha //n executar mais essa classe
 @SpringBootApplication
-public class UsuarioAutenticacaoJwtApplication {
+public class UsuarioAutenticacaoJwtApplication  {
 
     public static void main(String[] args) {
         SpringApplication.run(UsuarioAutenticacaoJwtApplication.class, args);

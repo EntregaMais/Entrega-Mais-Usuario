@@ -23,13 +23,15 @@ import java.util.Date;
 public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
 
     //TODO melhorias
-    public static final int TOKEN_EXPIRACAO = 600_000; //expiração fixa de 10min mas pode colocar no arquivo de configuração
+    public static final int TOKEN_EXPIRACAO = 900_000; //expiração fixa de 15min mas pode colocar no arquivo de configuração
     public static final String TOKEN_SENHA = "71ca1a4f-3c3d-44f3-a9da-02d493675b0a"; //guidgenerator.com //p desen mas n pode tá aqui aberta no codigo fonte //transportar p arquivo de config
 
     private final AuthenticationManager authenticationManager;
 
     public JWTAutenticarFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
+
+        //setFilterProcessesUrl("/api/services/controller/user/login");
     }
 
     //TODO inserir a lista de permissões do usuário linha 45
@@ -40,7 +42,8 @@ public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
             UsuarioModel usuario = new ObjectMapper()
                     .readValue(request.getInputStream(), UsuarioModel.class); //ler o corpo da requisição e a classe p converter
 
-            return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
+            return authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(
                     usuario.getEmail(),
                     usuario.getPassword(),
                     new ArrayList<>()
@@ -65,7 +68,9 @@ public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
                                     .withExpiresAt(new Date(System.currentTimeMillis() + TOKEN_EXPIRACAO))
                                     .sign(Algorithm.HMAC512(TOKEN_SENHA)); //assinar o token e criptografar ele
 
-        response.getWriter().write(token); //registrando token no corpo da pag
+        String body = usuarioData + " " + token;
+
+        response.getWriter().write(body); //registrando token no corpo da pag
         response.getWriter().flush();
     }
 }

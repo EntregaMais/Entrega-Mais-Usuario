@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Optional;
 
 //dados do usuario no padrão do springsecurity
+
 public class DetalheUsuarioData implements UserDetails {
 
     private final Optional<UsuarioModel> usuario;

@@ -13,16 +13,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name="Usuario")
-public class UsuarioModel implements Serializable{
-
-    private static final long serialVersionUID = 1L;
+public class UsuarioModel{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(unique = true, nullable = false)
-    @NotEmpty
     private String email;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)

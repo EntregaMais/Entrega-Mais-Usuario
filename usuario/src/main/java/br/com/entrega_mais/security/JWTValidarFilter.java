@@ -31,12 +31,7 @@ public class JWTValidarFilter extends BasicAuthenticationFilter {
 
         String atributo = request.getHeader(HEADER_ATRIBUTO);
 
-        if (atributo == null) {
-            chain.doFilter(request, response);
-            return;
-        }
-
-        if (!atributo.startsWith(ATRIBUTO_PREFIXO)) {
+        if (atributo == null || !atributo.startsWith(ATRIBUTO_PREFIXO)) {
             chain.doFilter(request, response);
             return;
         }
