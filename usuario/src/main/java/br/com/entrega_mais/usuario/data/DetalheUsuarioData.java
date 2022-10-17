@@ -1,6 +1,6 @@
-package br.com.entrega_mais.data;
+package br.com.entrega_mais.usuario.data;
 
-import br.com.entrega_mais.model.UsuarioModel;
+import br.com.entrega_mais.usuario.model.UsuarioModel;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -20,8 +20,9 @@ public class DetalheUsuarioData implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        //TODO retornar direitinho
+//        //TODO retornar direitinho
         return new ArrayList<>();
+        //return this.usuario.orElseThrow().getPerfis();
     }
 
     @Override

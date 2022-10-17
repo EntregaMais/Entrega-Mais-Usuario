@@ -1,10 +1,10 @@
-package br.com.entrega_mais.security;
+package br.com.entrega_mais.usuario.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import br.com.entrega_mais.data.DetalheUsuarioData;
-import br.com.entrega_mais.model.UsuarioModel;
+import br.com.entrega_mais.usuario.data.DetalheUsuarioData;
+import br.com.entrega_mais.usuario.model.UsuarioModel;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

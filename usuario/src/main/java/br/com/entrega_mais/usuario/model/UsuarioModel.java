@@ -1,7 +1,7 @@
-package br.com.entrega_mais.model;
+package br.com.entrega_mais.usuario.model;
 
-import java.io.Serializable;
-import javax.validation.constraints.NotEmpty;
+import java.util.Set;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,6 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity(name="Usuario")
 public class UsuarioModel{
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,5 +26,8 @@ public class UsuarioModel{
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     //p que qnd fizer uma requisicao nao mostrar nem a senha encriptada por questao de seguranca
     private String password;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Perfil> perfis;
 
 }

@@ -5,27 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2ae67a2-cc65-4a77-9e97-b4e6b4b3e827" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/model/Perfil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/usuario_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/usuario_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_20.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/UsuarioAutenticacaoJwtApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/UsuarioAutenticacaoJwtApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/data/DetalheUsuarioData.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/data/DetalheUsuarioData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/model/UsuarioModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/model/UsuarioModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/security/JWTAutenticarFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/security/JWTAutenticarFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/security/JWTConfiguracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/security/JWTConfiguracao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/security/JWTValidarFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/security/JWTValidarFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/services/DetalheUsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/services/DetalheUsuarioServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/data/DetalheUsuarioData.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/data/DetalheUsuarioData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/model/UsuarioModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/model/UsuarioModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/security/JWTAutenticarFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/security/JWTAutenticarFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/security/JWTConfiguracao.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/security/JWTConfiguracao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/security/JWTValidarFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/security/JWTValidarFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/services/DetalheUsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/services/DetalheUsuarioServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,6 +66,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.entrega_mais.usuario" />
+      <recent name="br.com.entrega_mais" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="UsuarioAutenticacaoJwtApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="usuario" />
@@ -84,6 +92,7 @@
       <workItem from="1665860429871" duration="6735000" />
       <workItem from="1665869364524" duration="14315000" />
       <workItem from="1665889315256" duration="10226000" />
+      <workItem from="1665954031063" duration="7717000" />
     </task>
     <servers />
   </component>

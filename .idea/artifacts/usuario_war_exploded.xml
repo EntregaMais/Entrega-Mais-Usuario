@@ -50,8 +50,6 @@
           <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.7.36" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.30" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.22" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.7.3" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.7.3" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.7.3" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-json:2.7.3" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.3" />
@@ -72,15 +70,18 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.3" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.3" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.3" />
+          <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt:0.9.1" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-validation:2.7.3" />
           <element id="library" level="project" name="Maven: org.hibernate.validator:hibernate-validator:6.2.4.Final" />
           <element id="library" level="project" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.7.3" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-crypto:5.7.3" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.22" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.22" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.22" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.22" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.7.3" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.7.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.22" />
         </element>
       </element>
       <element id="directory" name="META-INF">

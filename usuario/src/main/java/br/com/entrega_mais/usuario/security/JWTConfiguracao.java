@@ -1,6 +1,6 @@
-package br.com.entrega_mais.security;
+package br.com.entrega_mais.usuario.security;
 
-import br.com.entrega_mais.services.DetalheUsuarioServiceImpl;
+import br.com.entrega_mais.usuario.services.DetalheUsuarioServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

@@ -1,8 +1,8 @@
-package br.com.entrega_mais.services;
+package br.com.entrega_mais.usuario.services;
 
-import br.com.entrega_mais.data.DetalheUsuarioData;
-import br.com.entrega_mais.model.UsuarioModel;
-import br.com.entrega_mais.repository.UsuarioRepository;
+import br.com.entrega_mais.usuario.data.DetalheUsuarioData;
+import br.com.entrega_mais.usuario.model.UsuarioModel;
+import br.com.entrega_mais.usuario.repository.UsuarioRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

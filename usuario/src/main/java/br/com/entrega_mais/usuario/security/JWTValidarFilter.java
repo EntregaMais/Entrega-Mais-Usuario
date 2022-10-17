@@ -1,4 +1,4 @@
-package br.com.entrega_mais.security;
+package br.com.entrega_mais.usuario.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

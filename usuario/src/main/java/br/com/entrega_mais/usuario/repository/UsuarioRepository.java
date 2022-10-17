@@ -1,6 +1,6 @@
-package br.com.entrega_mais.repository;
+package br.com.entrega_mais.usuario.repository;
 
-import br.com.entrega_mais.model.UsuarioModel;
+import br.com.entrega_mais.usuario.model.UsuarioModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
