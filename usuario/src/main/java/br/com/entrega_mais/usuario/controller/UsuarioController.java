@@ -2,6 +2,7 @@ package br.com.entrega_mais.usuario.controller;
 
 import br.com.entrega_mais.usuario.model.UsuarioModel;
 import br.com.entrega_mais.usuario.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -15,7 +16,9 @@ import java.util.Optional;
 @RequestMapping("/api/usuario")
 public class UsuarioController {
 
+    @Autowired
     private final UsuarioRepository repository;
+
     private final PasswordEncoder encoder;
 
     public UsuarioController(UsuarioRepository repository, PasswordEncoder encoder) {
@@ -26,6 +29,17 @@ public class UsuarioController {
     @GetMapping("/listarTodos")
     public ResponseEntity<List<UsuarioModel>> listarTodos() {
         return ResponseEntity.ok(repository.findAll());
+    }
+
+
+    @RequestMapping(value = "/usuarioPorId/{id}", method = RequestMethod.GET)
+    public ResponseEntity<UsuarioModel> GetById(@PathVariable(value = "id") long id)
+    {
+        Optional<UsuarioModel> usuario = repository.findById(id);
+        if(usuario.isPresent())
+            return new ResponseEntity<UsuarioModel>(usuario.get(), HttpStatus.OK);
+        else
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @Transactional

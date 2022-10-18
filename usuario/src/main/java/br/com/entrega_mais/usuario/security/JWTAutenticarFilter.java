@@ -23,7 +23,7 @@ import java.util.Date;
 public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
 
     //TODO melhorias
-    public static final int TOKEN_EXPIRACAO = 900_000; //expiração fixa de 15min mas pode colocar no arquivo de configuração
+    public static final int TOKEN_EXPIRACAO = 600_000; //expiração fixa de 10min mas pode colocar no arquivo de configuração
     public static final String TOKEN_SENHA = "71ca1a4f-3c3d-44f3-a9da-02d493675b0a"; //guidgenerator.com //p desen mas n pode tá aqui aberta no codigo fonte //transportar p arquivo de config
 
     private final AuthenticationManager authenticationManager;
