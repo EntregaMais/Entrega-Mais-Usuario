@@ -33,7 +33,7 @@ public class UsuarioController {
 
 
     @RequestMapping(value = "/usuarioPorId/{id}", method = RequestMethod.GET)
-    public ResponseEntity<UsuarioModel> GetById(@PathVariable(value = "id") long id)
+    public ResponseEntity<UsuarioModel> GetById(@PathVariable(value = "id") Long id)
     {
         Optional<UsuarioModel> usuario = repository.findById(id);
         if(usuario.isPresent())
@@ -67,4 +67,17 @@ public class UsuarioController {
         HttpStatus status = (valid) ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
         return ResponseEntity.status(status).body(valid);
     }
+
+
+    @RequestMapping(value = "/usuarioPorEmail/{email}", method = RequestMethod.GET)
+    public ResponseEntity<UsuarioModel> GetById(@PathVariable(value = "email") String email)
+    {
+        Optional<UsuarioModel> usuario = repository.findByEmail(email);
+        if(usuario.isPresent())
+            return new ResponseEntity<UsuarioModel>(usuario.get(), HttpStatus.OK);
+        else
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+
 }

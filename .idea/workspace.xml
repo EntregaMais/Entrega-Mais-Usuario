@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/controller/UsuarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/model/UsuarioModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/model/UsuarioModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/repository/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/security/JWTAutenticarFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/src/main/java/br/com/entrega_mais/usuario/security/JWTAutenticarFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,8 @@
       <workItem from="1665869364524" duration="14315000" />
       <workItem from="1665889315256" duration="10226000" />
       <workItem from="1665954031063" duration="9652000" />
-      <workItem from="1666048888716" duration="2688000" />
+      <workItem from="1666048888716" duration="7166000" />
+      <workItem from="1666222244860" duration="980000" />
     </task>
     <servers />
   </component>
