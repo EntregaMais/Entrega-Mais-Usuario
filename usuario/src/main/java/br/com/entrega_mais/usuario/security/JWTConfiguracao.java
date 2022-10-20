@@ -36,6 +36,7 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/usuario/salvar").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/usuario/validarSenha").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/usuario/ok").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAutenticarFilter(authenticationManager()))

@@ -20,5 +20,4 @@ public class UsuarioAutenticacaoJwtApplication  {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         return encoder;
     }
-
 }

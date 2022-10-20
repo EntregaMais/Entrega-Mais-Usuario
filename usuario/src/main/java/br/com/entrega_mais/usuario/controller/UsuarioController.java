@@ -67,4 +67,9 @@ public class UsuarioController {
         HttpStatus status = (valid) ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
         return ResponseEntity.status(status).body(valid);
     }
+
+    @GetMapping("/ok")
+    public ResponseEntity<String> testandoAPi() {
+        return ResponseEntity.ok("ok");
+    }
 }
