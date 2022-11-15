@@ -1,11 +1,14 @@
 version: '3.9'
 services:
   app:
+    container_name: usuario_app_container
     build: .
     ports:
       - "8080:8080"
     networks:
       - entregamaisnetwork
+    depends_on:
+      - postgres
     restart: on-failure
 
   postgres:
@@ -17,9 +20,9 @@ services:
       PGDATA: /data/postgres
     volumes:
       - postgres-data:/data/postgres
-    expose:
-    - "7721:5432" # Publishes 7721 to other containers but NOT to host machine
-    command: -p 7721 
+    # expose:
+    # - "7721:5432" # Publishes 7721 to other containers but NOT to host machine
+    # command: -p 7721 
     ports:
       - "7721:5432"
     networks:
