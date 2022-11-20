@@ -4,7 +4,7 @@ services:
     container_name: usuario_app_container
     build: .
     ports:
-      - "8080:8080"
+      - "7720:7720"
     networks:
       - entregamaisnetwork
     depends_on:
@@ -20,9 +20,6 @@ services:
       PGDATA: /data/postgres
     volumes:
       - postgres-data:/data/postgres
-    # expose:
-    # - "7721:5432" # Publishes 7721 to other containers but NOT to host machine
-    # command: -p 7721 
     ports:
       - "7721:5432"
     networks:
@@ -39,7 +36,7 @@ services:
     volumes:
       - pgadmin-data:/var/lib/pgadmin
     ports:
-      - "7730:80"
+      - "7729:80"
     networks:
       - entregamaisnetwork
     depends_on:
