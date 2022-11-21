@@ -31,7 +31,7 @@ public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
     public JWTAutenticarFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
 
-        //setFilterProcessesUrl("/api/services/controller/user/login");
+        setFilterProcessesUrl("/api/usuario/login");
     }
 
     //TODO inserir a lista de permissões do usuário linha 45
