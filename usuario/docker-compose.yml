@@ -19,36 +19,34 @@ services:
       POSTGRES_PASSWORD: ifpb
       PGDATA: /data/postgres
     volumes:
-      - postgres-data:/data/postgres
+      - usuario-postgres-data:/data/postgres
     ports:
       - "7721:5432"
     networks:
       - entregamaisnetwork
     restart: unless-stopped
 
-  pgadmin:
-    container_name: usuario_pgadmin_container
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ifpb@ifpb.edu.br
-      PGADMIN_DEFAULT_PASSWORD: ifpb
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    volumes:
-      - pgadmin-data:/var/lib/pgadmin
-    ports:
-      - "7729:80"
-    networks:
-      - entregamaisnetwork
-    depends_on:
-      - postgres
-    restart: unless-stopped
+  # pgadmin:
+  #   container_name: usuario_pgadmin_container
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: ifpb@ifpb.edu.br
+  #     PGADMIN_DEFAULT_PASSWORD: ifpb
+  #     PGADMIN_CONFIG_SERVER_MODE: 'False'
+  #   volumes:
+  #     - usuario-pgadmin-data:/var/lib/pgadmin
+  #   ports:
+  #     - "7729:80"
+  #   networks:
+  #     - entregamaisnetwork
+  #   depends_on:
+  #     - postgres
+  #   restart: unless-stopped
 
 networks:
   entregamaisnetwork:
     name: entregamaisnetwork
 
 volumes:
-  postgres-data:
-  rabbitmq-data:
-  rabbitmq-data-setup:
-  pgadmin-data:
+  usuario-postgres-data:
+  # usuario-pgadmin-data:
