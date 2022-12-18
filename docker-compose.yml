@@ -5,11 +5,13 @@ services:
     build: .
     ports:
       - "7720:7720"
+    volumes:
+      - usuario-app-data:/app
     networks:
       - entregamaisnetwork
     depends_on:
       - postgres
-    restart: on-failure
+  
 
   postgres:
     container_name: usuario_postgres_container
@@ -20,6 +22,7 @@ services:
       PGDATA: /data/postgres
     volumes:
       - usuario-postgres-data:/data/postgres
+      - usuario-postgres-db-data:/var/lib/postgresql/data
     ports:
       - "7721:5432"
     networks:
@@ -27,16 +30,16 @@ services:
     restart: unless-stopped
 
   # pgadmin:
-  #   container_name: usuario_pgadmin_container
+  #   container_name: pgadmin_container
   #   image: dpage/pgadmin4
   #   environment:
   #     PGADMIN_DEFAULT_EMAIL: ifpb@ifpb.edu.br
   #     PGADMIN_DEFAULT_PASSWORD: ifpb
   #     PGADMIN_CONFIG_SERVER_MODE: 'False'
   #   volumes:
-  #     - usuario-pgadmin-data:/var/lib/pgadmin
+  #     - pgadmin-data:/var/lib/pgadmin
   #   ports:
-  #     - "7729:80"
+  #     - "7000:80"
   #   networks:
   #     - entregamaisnetwork
   #   depends_on:
@@ -48,5 +51,7 @@ networks:
     name: entregamaisnetwork
 
 volumes:
+  usuario-app-data:
   usuario-postgres-data:
+  usuario-postgres-db-data:
   # usuario-pgadmin-data:
