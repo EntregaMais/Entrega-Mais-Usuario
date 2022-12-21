@@ -1,5 +1,6 @@
 package br.com.entrega_mais.usuario.model;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
