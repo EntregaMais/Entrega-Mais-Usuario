@@ -1,61 +1,57 @@
 version: '3.9'
 services:
-  rabbitmq:
-    container_name: rabbitmq_container
-    image: rabbitmq:3-management
+  app:
+    container_name: usuario_app_container
+    build: .
     ports:
-      - "5672:5672"
-      - "15672:15672"
+      - "7720:7720"
     volumes:
-      - rabbitmq-data:/var/lib/rabbitmq
-      - rabbitmq-data-setup:/setup
-    tty: true
-    environment:
-      - RABBITMQ_DEFAULT_USER=ifpb
-      - RABBITMQ_DEFAULT_PASS=ifpb
-      - CLUSTERED=true
-      - RABBITMQ_ERLANG_COOKIE=default_key
-    restart: always
+      - usuario-app-data:/app
+    networks:
+      - entregamaisnetwork
+    depends_on:
+      - postgres
+  
 
   postgres:
-    container_name: postgres_container
+    container_name: usuario_postgres_container
     image: postgres
     environment:
       POSTGRES_USER: ifpb
       POSTGRES_PASSWORD: ifpb
       PGDATA: /data/postgres
     volumes:
-      - postgres-data:/data/postgres
+      - usuario-postgres-data:/data/postgres
+      - usuario-postgres-db-data:/var/lib/postgresql/data
     ports:
-      - "5433:5432"
+      - "7721:5432"
     networks:
-      - postgres
+      - entregamaisnetwork
     restart: unless-stopped
 
-  pgadmin:
-    container_name: pgadmin_container
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ifpb@ifpb.edu.br
-      PGADMIN_DEFAULT_PASSWORD: ifpb
-      PGADMIN_CONFIG_SERVER_MODE: 'False'
-    volumes:
-      - pgadmin-data:/var/lib/pgadmin
-    ports:
-      - "5050:80"
-    links:
-      - postgres
-    networks:
-      - postgres
-    depends_on:
-      - postgres
-    restart: unless-stopped
+  # pgadmin:
+  #   container_name: pgadmin_container
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: ifpb@ifpb.edu.br
+  #     PGADMIN_DEFAULT_PASSWORD: ifpb
+  #     PGADMIN_CONFIG_SERVER_MODE: 'False'
+  #   volumes:
+  #     - pgadmin-data:/var/lib/pgadmin
+  #   ports:
+  #     - "7000:80"
+  #   networks:
+  #     - entregamaisnetwork
+  #   depends_on:
+  #     - postgres
+  #   restart: unless-stopped
 
 networks:
-  postgres:
+  entregamaisnetwork:
+    name: entregamaisnetwork
 
 volumes:
-  postgres-data:
-  rabbitmq-data:
-  rabbitmq-data-setup:
-  pgadmin-data:
+  usuario-app-data:
+  usuario-postgres-data:
+  usuario-postgres-db-data:
+  # usuario-pgadmin-data:
